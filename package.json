@@ -2,6 +2,7 @@
   "name": "book-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://msk410.github.io/book-app",
   "dependencies": {
     "axios": "^0.18.0",
     "react": "^16.8.3",
@@ -12,6 +13,8 @@
     "redux-saga": "1.0.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -25,5 +28,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
 }
