@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { getBookData } from "../actions/actions";
+import { getBookData, testAction } from "../actions/actions";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
@@ -41,7 +41,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
-      getBookData
+      getBookData,
     },
     dispatch
   );
