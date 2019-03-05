@@ -36,15 +36,9 @@ class BookInfo extends Component {
               : "No publisher found"}
           </p>
         </div>
-        <Button
-          href={
-            !!this.props.saleInfo && !!this.props.saleInfo.buyLink
-              ? this.props.saleInfo.buyLink
-              : ""
-          }
-        >
-          Buy it now!
-        </Button>
+        {!!this.props.saleInfo && !!this.props.saleInfo.buyLink && (
+          <Button href={this.props.saleInfo.buyLink}>Buy it now!</Button>
+        )}
       </div>
     );
   }
